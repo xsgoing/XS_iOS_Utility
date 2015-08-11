@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    address = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, 200, 20)];
+    address = [[UILabel alloc]initWithFrame:CGRectMake(50, 30, 200, 20)];
     address.text = @"选择城市";
     [self.view addSubview:address];
     
