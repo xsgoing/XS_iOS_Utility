@@ -11,6 +11,7 @@
 #import "ZoomImageView.h"
 #import "XSAddressPicker.h"
 #import "BarItem.h"
+#import "Utility.h"
 @interface ViewController ()
 {
     UILabel *address;
@@ -51,6 +52,9 @@
     // 图片下方文字，适用于tabbar
     BarItem *item = [[BarItem alloc]initWithFrame:CGRectMake(4, self.view.frame.size.height-80, 80, 80) title:@"xsgoing" image:@"胡巴.jpg" titleColor:[UIColor blackColor]];
     [self.view addSubview:item];
+    
+    // 判断是否包含汉字
+    [Utility existChinese:@"我就是我"];
 }
 
 - (void)didReceiveMemoryWarning {
