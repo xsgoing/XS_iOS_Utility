@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51917CD51B7C2F9800A0DBBA /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 51917CD41B7C2F9800A0DBBA /* Utility.m */; };
 		51FC2AEC1B79E5620051AA1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AEB1B79E5620051AA1F /* main.m */; };
 		51FC2AEF1B79E5620051AA1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AEE1B79E5620051AA1F /* AppDelegate.m */; };
 		51FC2AF21B79E5620051AA1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AF11B79E5620051AA1F /* ViewController.m */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51917CD31B7C2F9800A0DBBA /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		51917CD41B7C2F9800A0DBBA /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		51FC2AE61B79E5620051AA1F /* XS_iOS_Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XS_iOS_Utility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FC2AEA1B79E5620051AA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51FC2AEB1B79E5620051AA1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,6 +135,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51917CD21B7C2F9800A0DBBA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				51917CD31B7C2F9800A0DBBA /* Utility.h */,
+				51917CD41B7C2F9800A0DBBA /* Utility.m */,
+			);
+			name = Utility;
+			path = "../../../Desktop/乐浪/第四天/乐浪/乐浪/main/Utility";
+			sourceTree = "<group>";
+		};
 		51FC2ADD1B79E5620051AA1F = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +166,7 @@
 		51FC2AE81B79E5620051AA1F /* XS_iOS_Utility */ = {
 			isa = PBXGroup;
 			children = (
+				51917CD21B7C2F9800A0DBBA /* Utility */,
 				51FC2B0F1B79E5960051AA1F /* 地区选择器 */,
 				51FC2B131B79E5960051AA1F /* 胡巴.jpg */,
 				51FC2B141B79E5960051AA1F /* 图标下方文字 */,
@@ -409,6 +423,7 @@
 				51FC2B591B79E5960051AA1F /* UIRefreshControl+AFNetworking.m in Sources */,
 				51FC2B511B79E5960051AA1F /* AFURLResponseSerialization.m in Sources */,
 				51FC2AEF1B79E5620051AA1F /* AppDelegate.m in Sources */,
+				51917CD51B7C2F9800A0DBBA /* Utility.m in Sources */,
 				51FC2B571B79E5960051AA1F /* UIImageView+AFNetworking.m in Sources */,
 				51FC2B491B79E5960051AA1F /* BarItem.m in Sources */,
 				51FC2B551B79E5960051AA1F /* UIAlertView+AFNetworking.m in Sources */,
@@ -616,6 +631,7 @@
 				51FC2B0B1B79E5620051AA1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51FC2B0C1B79E5620051AA1F /* Build configuration list for PBXNativeTarget "XS_iOS_UtilityTests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +640,7 @@
 				51FC2B0E1B79E5620051AA1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
