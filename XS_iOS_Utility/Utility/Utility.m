@@ -608,6 +608,25 @@ const double pi = 3.14159265358979324;
     return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1.0f];
 }
 
+// 获取MP3文件的封面图
++ (UIImage *)getImageFromMp3WithFilePath:(NSString *)filePath {
+    
+    UIImage *img = [[UIImage alloc]init];
+    
+    NSURL *fileUrl = [NSURL URLWithString:filePath];
+    AVURLAsset *mp3Assent = [AVURLAsset URLAssetWithURL:fileUrl options:nil];
+    NSString *format = [mp3Assent availableMetadataFormats][0];
+    for (AVMetadataItem *metadataItem in [mp3Assent metadataForFormat:format]) {
+    
+        id item = metadataItem.value;
+        if ([metadataItem.commonKey isEqualToString:@"artwork"]) {
+            
+            img = [[UIImage alloc]initWithData:item];
+        }
+    }
+    return img;
+}
+
 @end
 
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import <AVFoundation/AVFoundation.h>
 @interface Utility : NSObject
 
 /**
@@ -152,4 +153,13 @@
  *  @return 转换后的UIColor
  */
 + (UIColor *) colorWithHexString: (NSString *)color;
+
+/**
+ *  获取MP3文件中的封面缩略图
+ *
+ *  @param filePath 文件路径
+ *
+ *  @return     封面缩略图
+ */
++ (UIImage *)getImageFromMp3WithFilePath:(NSString *)filePath;
 @end
