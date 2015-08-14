@@ -18,6 +18,10 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer.timeoutInterval = time;
+    if (responseSerializer == nil) {
+        
+        responseSerializer = [AFJSONResponseSerializer serializer];
+    }
     manager.responseSerializer = responseSerializer;
     AFHTTPRequestOperation *operation = nil;
     
