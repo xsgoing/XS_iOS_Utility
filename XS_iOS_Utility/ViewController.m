@@ -12,6 +12,7 @@
 #import "XSAddressPicker.h"
 #import "BarItem.h"
 #import "Utility.h"
+#import "XSDatePicker.h"
 @interface ViewController ()
 {
     UILabel *address;
@@ -55,6 +56,13 @@
     
     // 判断是否包含汉字
     [Utility existChinese:@"我就是我"];
+    
+    // 时间选择
+    XSDatePicker *datePicker = [[XSDatePicker alloc]initWithFrame:self.view.bounds Mode:UIDatePickerModeDate CurrentDate:nil MaxDate:nil OKAction:^(NSDate *date) {
+        
+    }];
+    [self.view addSubview:datePicker];
+    
 }
 
 - (void)didReceiveMemoryWarning {

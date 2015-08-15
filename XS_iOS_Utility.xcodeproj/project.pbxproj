@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51917CD91B7C31E000A0DBBA /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 51917CD81B7C31E000A0DBBA /* Utility.m */; };
+		519A960A1B7F3B8800F997C5 /* XSDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 519A96091B7F3B8800F997C5 /* XSDatePicker.m */; };
 		51FC2AEC1B79E5620051AA1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AEB1B79E5620051AA1F /* main.m */; };
 		51FC2AEF1B79E5620051AA1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AEE1B79E5620051AA1F /* AppDelegate.m */; };
 		51FC2AF21B79E5620051AA1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AF11B79E5620051AA1F /* ViewController.m */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		51917CD71B7C31E000A0DBBA /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		51917CD81B7C31E000A0DBBA /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		519A96081B7F3B8800F997C5 /* XSDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDatePicker.h; sourceTree = "<group>"; };
+		519A96091B7F3B8800F997C5 /* XSDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDatePicker.m; sourceTree = "<group>"; };
 		51FC2AE61B79E5620051AA1F /* XS_iOS_Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XS_iOS_Utility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FC2AEA1B79E5620051AA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51FC2AEB1B79E5620051AA1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +147,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		519A96071B7F3B6D00F997C5 /* 时间选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				519A96081B7F3B8800F997C5 /* XSDatePicker.h */,
+				519A96091B7F3B8800F997C5 /* XSDatePicker.m */,
+			);
+			name = "时间选择器";
+			sourceTree = "<group>";
+		};
 		51FC2ADD1B79E5620051AA1F = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +177,7 @@
 		51FC2AE81B79E5620051AA1F /* XS_iOS_Utility */ = {
 			isa = PBXGroup;
 			children = (
+				519A96071B7F3B6D00F997C5 /* 时间选择器 */,
 				51917CD61B7C31E000A0DBBA /* Utility */,
 				51FC2B0F1B79E5960051AA1F /* 地区选择器 */,
 				51FC2B131B79E5960051AA1F /* 胡巴.jpg */,
@@ -432,6 +445,7 @@
 				51FC2AEC1B79E5620051AA1F /* main.m in Sources */,
 				51FC2B5B1B79E5960051AA1F /* DataService.m in Sources */,
 				51FC2B471B79E5960051AA1F /* XSAddressPicker.m in Sources */,
+				519A960A1B7F3B8800F997C5 /* XSDatePicker.m in Sources */,
 				51FC2B5C1B79E5960051AA1F /* UIView+EXT.m in Sources */,
 				51FC2B4C1B79E5960051AA1F /* AFHTTPSessionManager.m in Sources */,
 				51FC2B541B79E5960051AA1F /* UIActivityIndicatorView+AFNetworking.m in Sources */,
