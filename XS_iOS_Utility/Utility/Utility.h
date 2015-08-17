@@ -162,4 +162,14 @@
  *  @return     封面缩略图
  */
 + (UIImage *)getImageFromMp3WithFilePath:(NSString *)filePath;
+
+/**
+ *  删除数组中重复的值
+ *
+ *  @param array 原数组
+ *
+ *  @return 返回的数组
+ */
++ (NSMutableArray *)delRepeatValueFromArray:(NSArray *)array;
+
 @end

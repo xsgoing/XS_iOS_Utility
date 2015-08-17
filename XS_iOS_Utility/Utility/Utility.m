@@ -627,6 +627,20 @@ const double pi = 3.14159265358979324;
     return img;
 }
 
+// 删除数组中重复的值
++ (NSMutableArray *)delRepeatValueFromArray:(NSArray *)array {
+    
+    NSMutableArray *temp = [NSMutableArray array];
+    
+    for (id obj in array) {
+        
+        if (![temp containsObject:obj]) {
+            [temp addObject:obj];
+        }
+    }
+    return temp;
+}
+
 @end
 
 
