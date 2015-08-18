@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import <AVFoundation/AVFoundation.h>
+
+@interface lrcModel : NSObject
+
+@property (nonatomic,strong)NSMutableDictionary *lrcDic;
+@property (nonatomic,strong)NSMutableArray *timeArray;
+- initWithLrcDic:(NSMutableDictionary *)dic TimeArray:(NSMutableArray *)array;
+
+@end
+
 @interface Utility : NSObject
 
 /**
@@ -171,5 +180,14 @@
  *  @return 返回的数组
  */
 + (NSMutableArray *)delRepeatValueFromArray:(NSArray *)array;
+
+/**
+ *  将lrc歌词解析成字典
+ *
+ *  @param lrc lrc字符串
+ *
+ *  @return lrc字典：键-值：时间-歌词
+ */
++ (lrcModel *)convertLrcToDictionary:(NSString *)lrc;
 
 @end

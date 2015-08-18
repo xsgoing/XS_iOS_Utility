@@ -11,6 +11,21 @@ const double a = 6378245.0;
 const double ee = 0.00669342162296594323;
 const double pi = 3.14159265358979324;
 
+@implementation lrcModel
+
+- (id)initWithLrcDic:(NSMutableDictionary *)dic TimeArray:(NSMutableArray *)array {
+    
+    self = [super init];
+    if (self) {
+        
+        self.lrcDic = dic;
+        self.timeArray = array;
+    }
+    return self;
+}
+
+@end
+
 @implementation Utility
 //归档
 + (BOOL)archiver:(id)object Path:(NSString *)path forKey:(NSString *)key{
@@ -639,6 +654,70 @@ const double pi = 3.14159265358979324;
         }
     }
     return temp;
+}
+
+// 将lrc歌词解析成字典
++ (lrcModel *)convertLrcToDictionary:(NSString *)lrc{
+    
+    // 存放歌词和时间的字典键：时间，值：歌词
+    NSMutableDictionary *lrcDic = [NSMutableDictionary dictionary];
+
+    //时间数组
+    NSMutableArray *timeArray = [NSMutableArray array];
+    
+    // 将歌词按行分割
+    NSArray *lrcArray = [lrc componentsSeparatedByString:@"\n"];
+    for (NSString *lrcString in lrcArray) {
+        
+//        [00:00][00:01]大雪纷飞
+        // 将每一行按“]”分割
+        NSArray *singleArray = [lrcString componentsSeparatedByString:@"]"];
+        // 临时存放每一行的时间
+        NSMutableArray *times = [NSMutableArray array];
+        for (int i = 0;i < singleArray.count;i++) {
+            
+            NSString *item = singleArray[i];
+            // 如果是第一部分
+            if (i == 0) {
+                // 如果是时间标签
+                if ([[item substringWithRange:NSMakeRange(3, 1)] isEqualToString:@":"] && item.length <10 && item.length >5) {
+                    // 将时间加入临时数组
+                    [times addObject:[item substringWithRange:NSMakeRange(1, 5)]];
+                }
+                else{
+                    
+                    break;
+                }
+            }
+            // 如果有多个时间标签
+            else if (i != singleArray.count-1) {
+                
+                // 将时间加入临时数组
+                [times addObject:[item substringWithRange:NSMakeRange(1, 5)]];
+                
+            }
+            // 如果是最后一部分，即歌词
+            else {
+                
+                for (NSString *time in times) {
+                    
+                    NSArray *temp = [time componentsSeparatedByString:@":"];
+                    // 将时间字符串转化成秒存入
+                    [lrcDic setObject:singleArray[i] forKey:@([temp[0] integerValue]*60+[temp[1] integerValue])];
+                    [timeArray addObject:@([temp[0] integerValue]*60+[temp[1] integerValue])];
+                    // 排序
+                    [timeArray sortUsingSelector:@selector(compare:)];
+                    // 去掉数组中重复的值
+                    timeArray = [Utility delRepeatValueFromArray:timeArray];
+                }
+            }
+            
+        }
+        
+        
+    }
+    lrcModel *model = [[lrcModel alloc]initWithLrcDic:lrcDic TimeArray:timeArray];
+    return model;
 }
 
 @end
