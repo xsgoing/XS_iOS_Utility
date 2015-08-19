@@ -39,6 +39,13 @@
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             
             // 错误提示
+            if (error.code == -1009) {
+                
+                error = [NSError errorWithDomain:@"网络连接出现问题" code:-1009 userInfo:nil];
+            }
+            else if (error.code == -1001) {
+                error = [NSError errorWithDomain:@"网络有点慢" code:-1001 userInfo:nil];
+            }
 
             if (block != nil) {
                 
@@ -60,6 +67,13 @@
                 
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 
+                if (error.code == -1009) {
+                    
+                    error = [NSError errorWithDomain:@"网络连接出现问题" code:-1009 userInfo:nil];
+                }
+                else if (error.code == -1001) {
+                    error = [NSError errorWithDomain:@"网络有点慢" code:-1001 userInfo:nil];
+                }
 
                 if (block != nil) {
                     
@@ -115,6 +129,13 @@
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
+        if (error.code == -1009) {
+            
+            error = [NSError errorWithDomain:@"网络连接出现问题" code:-1009 userInfo:nil];
+        }
+        else if (error.code == -1001) {
+            error = [NSError errorWithDomain:@"网络有点慢" code:-1001 userInfo:nil];
+        }
 
         block(nil,error);
     }];

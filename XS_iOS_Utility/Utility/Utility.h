@@ -190,4 +190,12 @@
  */
 + (lrcModel *)convertLrcToDictionary:(NSString *)lrc;
 
+/**
+ *  字符串转字典
+ *
+ *  @param string 字符串
+ *
+ *  @return 自定
+ */
++ (NSDictionary *)getDictionaryFromString:(NSString *)string;
 @end

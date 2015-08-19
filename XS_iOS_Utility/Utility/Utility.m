@@ -716,8 +716,17 @@ const double pi = 3.14159265358979324;
         
         
     }
+    // model中包括歌词时间字典和时间数组
     lrcModel *model = [[lrcModel alloc]initWithLrcDic:lrcDic TimeArray:timeArray];
     return model;
+}
+
+// 字符串转字典
++ (NSDictionary *)getDictionaryFromString:(NSString *)string {
+    
+    NSData *jsonData = [string dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    return dic;
 }
 
 @end
