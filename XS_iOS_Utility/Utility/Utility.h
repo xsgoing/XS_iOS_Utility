@@ -198,4 +198,15 @@
  *  @return 自定
  */
 + (NSDictionary *)getDictionaryFromString:(NSString *)string;
+
+/**
+ *  判断输入框输入过程中是否是合法金钱数额
+ *
+ *  @param textField 文本框
+ *  @param range     文本返回
+ *  @param string    新文本
+ *
+ *  @return 是否合法
+ */
++ (BOOL)isValidMoney:(UITextField *)textField Range:(NSRange)range replacementString:(NSString *)string;
 @end
