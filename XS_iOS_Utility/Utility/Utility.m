@@ -52,7 +52,7 @@ const double pi = 3.14159265358979324;
 + (BOOL)isValidateMobile:(NSString *)mobile {
     
        //手机号以13， 15，18开头，八个 \d 数字字符
-    NSString *phoneRegex = @"^((13[0-9])|(147)|(15[^4,\\D]|(18[0-9]))\\d{8}$";
+    NSString *phoneRegex = @"^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$";
     NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
     //    NSLog(@"phoneTest is %@",phoneTest);
     return [phoneTest evaluateWithObject:mobile];
