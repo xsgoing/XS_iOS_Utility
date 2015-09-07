@@ -729,8 +729,9 @@ const double pi = 3.14159265358979324;
     return dic;
 }
 
+
 // 判断输入框输入过程中是否是合法金钱数额
-- (BOOL)isValidMoney:(UITextField *)textField Range:(NSRange)range replacementString:(NSString *)string{
++ (BOOL)isValidMoney:(UITextField *)textField Range:(NSRange)range replacementString:(NSString *)string{
         
         NSScanner      *scanner    = [NSScanner scannerWithString:string];
         

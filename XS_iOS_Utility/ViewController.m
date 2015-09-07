@@ -13,6 +13,7 @@
 #import "BarItem.h"
 #import "Utility.h"
 #import "XSDatePicker.h"
+#import "XSProgress.h"
 @interface ViewController ()
 {
     UILabel *address;
@@ -24,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+   
     address = [[UILabel alloc]initWithFrame:CGRectMake(50, 30, 200, 20)];
     address.text = @"选择城市";
     [self.view addSubview:address];
@@ -63,6 +66,21 @@
     }];
     [self.view addSubview:datePicker];
     
+     [XSProgress show];
+    
+    [self performSelector:@selector(hideit) withObject:nil afterDelay:5];
+}
+
+- (void)hideit {
+    
+    [XSProgress hide];
+    
+    [self performSelector:@selector(showit) withObject:nil afterDelay:3];
+}
+
+- (void)showit {
+    
+    [XSProgress show];
 }
 
 - (void)didReceiveMemoryWarning {
