@@ -209,4 +209,13 @@
  *  @return 是否合法
  */
 + (BOOL)isValidMoney:(UITextField *)textField Range:(NSRange)range replacementString:(NSString *)string;
+
+/**
+ *  画虚线
+ *
+ *  @param frame 虚线位置
+ *
+ *  @return 虚线
+ */
++ (UIImageView *)drawDashes:(CGRect)frame;
 @end

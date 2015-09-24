@@ -837,6 +837,28 @@ const double pi = 3.14159265358979324;
     
 }
 
+// 画虚线
++ (UIImageView *)drawDashes:(CGRect)frame {
+    
+    UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:frame];
+    
+    UIGraphicsBeginImageContext(imageView1.frame.size);   //开始画线
+    [imageView1.image drawInRect:CGRectMake(0, 0, imageView1.frame.size.width, imageView1.frame.size.height)];
+    CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);  //设置线条终点形状
+    
+    
+    CGFloat lengths[] = {1,1};
+    CGContextRef line = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(line, [UIColor grayColor].CGColor);
+    
+    CGContextSetLineDash(line, 0, lengths, 2);  //画虚线
+    CGContextMoveToPoint(line, 0.0, frame.size.height*0.5);    //开始画线
+    CGContextAddLineToPoint(line, frame.size.width, frame.size.height*0.5);
+    CGContextStrokePath(line);
+    
+    imageView1.image = UIGraphicsGetImageFromCurrentImageContext();
+    return imageView1;
+}
 
 @end
 
