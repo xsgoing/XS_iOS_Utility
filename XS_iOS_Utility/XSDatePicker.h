@@ -25,6 +25,7 @@ typedef void(^Block)(NSDate *date);
                          Mode:(UIDatePickerMode)mode
                   CurrentDate:(NSDate *)current
                       MaxDate:(NSDate *)max
+                      MinDate:(NSDate *)min
                      OKAction:(Block)block;
 @property (nonatomic,copy)Block block;
 @end

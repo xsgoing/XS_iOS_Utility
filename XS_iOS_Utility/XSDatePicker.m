@@ -14,7 +14,7 @@
     
     UIDatePicker *picker;
 }
-- (instancetype)initWithFrame:(CGRect)frame Mode:(UIDatePickerMode)mode CurrentDate:(NSDate *)current MaxDate:(NSDate *)max OKAction:(Block)block
+- (instancetype)initWithFrame:(CGRect)frame Mode:(UIDatePickerMode)mode CurrentDate:(NSDate *)current MaxDate:(NSDate *)max MinDate:(NSDate *)min OKAction:(Block)block
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -41,11 +41,14 @@
         mode = UIDatePickerModeDate;
         picker.datePickerMode = mode;
         
-        if (max == nil) {
+        if (max != nil) {
             
-            max = [NSDate date];
+            picker.maximumDate = max;
         }
-        picker.maximumDate = max;
+        if (min != nil) {
+            
+            picker.minimumDate = min;
+        }
         picker.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1];
         [self insertSubview:picker belowSubview:confirm];
         
