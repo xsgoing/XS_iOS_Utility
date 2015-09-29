@@ -66,6 +66,8 @@
     }];
     [self.view addSubview:datePicker];
     
+    
+    
      [XSProgress show];
     
     [self performSelector:@selector(hideit) withObject:nil afterDelay:5];

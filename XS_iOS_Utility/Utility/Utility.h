@@ -218,4 +218,14 @@
  *  @return 虚线
  */
 + (UIImageView *)drawDashes:(CGRect)frame;
+
+/**
+ *  验证身份证号
+ *
+ *  @param value 字符串
+ *
+ *  @return 是否身份证
+ */
++ (BOOL)isValidateIDCard:(NSString *)value;
+
 @end

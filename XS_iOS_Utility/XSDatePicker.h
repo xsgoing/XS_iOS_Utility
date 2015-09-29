@@ -19,7 +19,7 @@ typedef void(^Block)(NSDate *date);
  *  @param max     最大显示日期
  *  @param block   确定按钮回调
  *
- *  @return 
+ *  @return
  */
 - (instancetype)initWithFrame:(CGRect)frame
                          Mode:(UIDatePickerMode)mode

@@ -59,13 +59,13 @@
 /* Begin PBXFileReference section */
 		51917CD71B7C31E000A0DBBA /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		51917CD81B7C31E000A0DBBA /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
-		519A96081B7F3B8800F997C5 /* XSDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDatePicker.h; sourceTree = "<group>"; };
 		519A96091B7F3B8800F997C5 /* XSDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDatePicker.m; sourceTree = "<group>"; };
 		51D24A901B95E8470058EF3E /* XSProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSProgress.h; sourceTree = "<group>"; };
 		51D24A911B95E8470058EF3E /* XSProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSProgress.m; sourceTree = "<group>"; };
 		51D24A931B95EE4E0058EF3E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		51D24A941B95EE4E0058EF3E /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		51D24A951B95EE4E0058EF3E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		51D7F1BA1BBA87BB002EA5B4 /* XSDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSDatePicker.h; sourceTree = "<group>"; };
 		51FC2AE61B79E5620051AA1F /* XS_iOS_Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XS_iOS_Utility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FC2AEA1B79E5620051AA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51FC2AEB1B79E5620051AA1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		519A96071B7F3B6D00F997C5 /* 时间选择器 */ = {
 			isa = PBXGroup;
 			children = (
-				519A96081B7F3B8800F997C5 /* XSDatePicker.h */,
+				51D7F1BA1BBA87BB002EA5B4 /* XSDatePicker.h */,
 				519A96091B7F3B8800F997C5 /* XSDatePicker.m */,
 			);
 			name = "时间选择器";

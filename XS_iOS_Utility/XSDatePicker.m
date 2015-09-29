@@ -1,4 +1,5 @@
 
+
 //
 //  XSDatePicker.m
 //  乐浪
@@ -17,7 +18,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-     
+        
         UIButton *confirm = [UIButton buttonWithType:UIButtonTypeCustom];
         CGFloat height = self.frame.size.height *0.2;
         if (height>35) {
@@ -39,7 +40,7 @@
         
         mode = UIDatePickerModeDate;
         picker.datePickerMode = mode;
-
+        
         if (max == nil) {
             
             max = [NSDate date];
@@ -47,7 +48,7 @@
         picker.maximumDate = max;
         picker.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1];
         [self insertSubview:picker belowSubview:confirm];
-
+        
         _block = block;
     }
     return self;
