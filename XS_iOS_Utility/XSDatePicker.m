@@ -14,6 +14,8 @@
     
     UIDatePicker *picker;
 }
+
+// xs自定义时间选择
 - (instancetype)initWithFrame:(CGRect)frame Mode:(UIDatePickerMode)mode CurrentDate:(NSDate *)current MaxDate:(NSDate *)max MinDate:(NSDate *)min OKAction:(Block)block
 {
     self = [super initWithFrame:frame];
@@ -25,7 +27,7 @@
             height = 35;
         }
         confirm.frame = CGRectMake(self.frame.size.width*0.1, 5, self.frame.size.width*0.8, height);
-        confirm.layer.cornerRadius = 7;
+        confirm.layer.cornerRadius = 6;
         confirm.backgroundColor = [UIColor colorWithRed:0.000f green:0.592f blue:0.984f alpha:1.00f];
         [confirm setTitle:@"确定" forState:UIControlStateNormal];
         [confirm addTarget:self action:@selector(confirmTime) forControlEvents:UIControlEventTouchUpInside];

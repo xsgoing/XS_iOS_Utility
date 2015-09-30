@@ -17,6 +17,7 @@ typedef void(^Block)(NSDate *date);
  *  @param mode    UIDatePickerMode
  *  @param current 当前显示日期
  *  @param max     最大显示日期
+ *  @param min     最小时间
  *  @param block   确定按钮回调
  *
  *  @return

@@ -61,7 +61,7 @@
     [Utility existChinese:@"我就是我"];
     
     // 时间选择
-    XSDatePicker *datePicker = [[XSDatePicker alloc]initWithFrame:self.view.bounds Mode:UIDatePickerModeDate CurrentDate:nil MaxDate:nil OKAction:^(NSDate *date) {
+    XSDatePicker *datePicker = [[XSDatePicker alloc]initWithFrame:self.view.bounds Mode:UIDatePickerModeDate CurrentDate:nil MaxDate:nil MinDate:nil  OKAction:^(NSDate *date) {
         
     }];
     [self.view addSubview:datePicker];
