@@ -850,7 +850,7 @@ const double pi = 3.14159265358979324;
     CGFloat lengths[] = {1,1};
     CGContextRef line = UIGraphicsGetCurrentContext();
     CGContextSetStrokeColorWithColor(line, [UIColor grayColor].CGColor);
-    
+
     CGContextSetLineDash(line, 0, lengths, 2);  //画虚线
     CGContextMoveToPoint(line, 0.0, frame.size.height*0.5);    //开始画线
     CGContextAddLineToPoint(line, frame.size.width, frame.size.height*0.5);
@@ -896,6 +896,136 @@ const double pi = 3.14159265358979324;
     NSString *checkString = @"10X98765432";
     checkBit = [checkString substringWithRange:NSMakeRange(remainder,1)];// 判断校验位
     return [checkBit isEqualToString:[[value substringWithRange:NSMakeRange(17,1)] uppercaseString]];
+}
+
+/**
+ *  获取图片某点的颜色
+ *
+ *  @param point 像素点
+ *  @param image 图片
+ *
+ *  @return 颜色
+ */
++ (UIColor*) getPixelColorAtLocation:(CGPoint)point inImage:(UIImage *)image {
+    
+    UIColor* color = nil;
+    CGImageRef inImage = image.CGImage;
+    CGContextRef cgctx = [self createARGBBitmapContextFromImage:
+                          inImage];
+    
+    if (cgctx == NULL) { return nil; /* error */ }
+    size_t w = CGImageGetWidth(inImage);
+    size_t h = CGImageGetHeight(inImage);
+    CGRect rect = {{0,0},{w,h}};
+    
+    CGContextDrawImage(cgctx, rect, inImage);
+    
+    unsigned char* data = CGBitmapContextGetData (cgctx);
+    
+    if (data != NULL) {
+        int offset = 4*((w*round(point.y))+round(point.x));
+        int alpha =  data[offset];
+        int red = data[offset+1];
+        int green = data[offset+2];
+        int blue = data[offset+3];
+        NSLog(@"offset: %i colors: RGB A %i %i %i  %i",offset,red,green,
+              blue,alpha);
+        
+        NSLog(@"x:%f y:%f", point.x, point.y);
+        
+        color = [UIColor colorWithRed:(red/255.0f) green:(green/255.0f) blue:
+                 (blue/255.0f) alpha:(alpha/255.0f)];
+    }
+    
+    CGContextRelease(cgctx);
+    
+    if (data) { free(data); }
+    
+    return color;
+    
+}
+
+/**
+ *  将cgimage转成bitmap
+ *
+ *  @param inImage 图片
+ *
+ *  @return bitmap
+ */
++ (CGContextRef) createARGBBitmapContextFromImage:(CGImageRef) inImage {
+    
+    CGContextRef    context = NULL;
+    
+    CGColorSpaceRef colorSpace;
+    
+    void *          bitmapData;
+    
+    int             bitmapByteCount;
+    
+    int             bitmapBytesPerRow;
+    
+    size_t pixelsWide = CGImageGetWidth(inImage);
+    
+    size_t pixelsHigh = CGImageGetHeight(inImage);
+    
+    bitmapBytesPerRow   = (pixelsWide * 4);
+    
+    bitmapByteCount     = (bitmapBytesPerRow * pixelsHigh);
+    
+    colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    if (colorSpace == NULL)
+        
+    {
+        
+        fprintf(stderr, "Error allocating color space\n");
+        
+        return NULL;
+        
+    }
+    
+    bitmapData = malloc( bitmapByteCount );
+    
+    if (bitmapData == NULL)
+        
+    {
+        
+        fprintf (stderr, "Memory not allocated!");
+        
+        CGColorSpaceRelease( colorSpace );
+        
+        return NULL;
+        
+    }
+    
+    context = CGBitmapContextCreate (bitmapData,
+                                     
+                                     pixelsWide,
+                                     
+                                     pixelsHigh,
+                                     
+                                     8,
+                                     
+                                     bitmapBytesPerRow,
+                                     
+                                     colorSpace,
+                                     
+                                     kCGImageAlphaPremultipliedFirst);
+    
+    if (context == NULL)
+        
+    {
+        
+        free (bitmapData);
+        
+        fprintf (stderr, "Context not created!");
+        
+    }
+    
+    CGColorSpaceRelease( colorSpace );
+    
+    return context;
+    
 }
 
 @end

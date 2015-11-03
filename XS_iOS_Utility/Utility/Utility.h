@@ -228,4 +228,13 @@
  */
 + (BOOL)isValidateIDCard:(NSString *)value;
 
+/**
+ *  获取图片某点的颜色
+ *
+ *  @param point 像素点
+ *  @param image 图片
+ *
+ *  @return 颜色
+ */
++ (UIColor*) getPixelColorAtLocation:(CGPoint)point inImage:(UIImage *)image;
 @end
