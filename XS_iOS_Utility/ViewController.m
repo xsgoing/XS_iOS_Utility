@@ -14,9 +14,11 @@
 #import "Utility.h"
 #import "XSDatePicker.h"
 #import "XSProgress.h"
+#import "XSAlertview.h"
 @interface ViewController ()
 {
     UILabel *address;
+    XSAlertview *alertView;
 }
 @end
 
@@ -25,20 +27,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.view.backgroundColor = [UIColor whiteColor];
    
     address = [[UILabel alloc]initWithFrame:CGRectMake(50, 30, 200, 20)];
     address.text = @"选择城市";
     [self.view addSubview:address];
     
     // 网络请求
-    [DataService requestURL:@"https://github.com" httpMethod:@"POST" timeout:1 params:nil responseSerializer:[AFHTTPResponseSerializer serializer] completion:^(id result, NSError *error) {
-        NSLog(@"%@%@",result,error);
-    }];
+//    [DataService requestURL:@"https://github.com" httpMethod:@"POST" timeout:1 params:nil responseSerializer:[AFHTTPResponseSerializer serializer] completion:^(id result, NSError *error) {
+//        NSLog(@"%@%@",result,error);
+//    }];
     
     
     // 点击小图显示大图
     ZoomImageView *zoom = [[ZoomImageView alloc]initWithFrame:CGRectMake(100, 100, 50, 50)];
+    zoom.userInteractionEnabled = YES;
     zoom.image = [UIImage imageNamed:@"胡巴.jpg"];
     zoom.urlString = @"http://cdn.duitang.com/uploads/item/201507/22/20150722123833_U5hmZ.thumb.700_0.jpeg";
     [self.view addSubview:zoom];
@@ -84,6 +87,13 @@
     
     [XSProgress show];
 }
+
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    
+//        
+//    [XSAlertview showWithMessage:@"系统故障" BackGroungColor:nil TitleColor:nil];
+//    
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

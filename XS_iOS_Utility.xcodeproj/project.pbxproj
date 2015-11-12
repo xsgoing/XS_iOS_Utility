@@ -13,6 +13,10 @@
 		51D24A961B95EE4E0058EF3E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D24A931B95EE4E0058EF3E /* 2.png */; };
 		51D24A971B95EE4E0058EF3E /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D24A941B95EE4E0058EF3E /* 3.png */; };
 		51D24A981B95EE4E0058EF3E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D24A951B95EE4E0058EF3E /* 1.png */; };
+		51E3DB741BF03E4C00CEE060 /* XSAlertview.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E3DB731BF03E4C00CEE060 /* XSAlertview.m */; };
+		51EA04811BF47F3A003A93F0 /* XSQRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA047E1BF47F3A003A93F0 /* XSQRView.m */; };
+		51EA04821BF47F3A003A93F0 /* zbar_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51EA047F1BF47F3A003A93F0 /* zbar_line@2x.png */; };
+		51EA04831BF47F3A003A93F0 /* zbar_pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51EA04801BF47F3A003A93F0 /* zbar_pick_bg@2x.png */; };
 		51FC2AEC1B79E5620051AA1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AEB1B79E5620051AA1F /* main.m */; };
 		51FC2AEF1B79E5620051AA1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AEE1B79E5620051AA1F /* AppDelegate.m */; };
 		51FC2AF21B79E5620051AA1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FC2AF11B79E5620051AA1F /* ViewController.m */; };
@@ -66,6 +70,12 @@
 		51D24A941B95EE4E0058EF3E /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		51D24A951B95EE4E0058EF3E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		51D7F1BA1BBA87BB002EA5B4 /* XSDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSDatePicker.h; sourceTree = "<group>"; };
+		51E3DB721BF03E4C00CEE060 /* XSAlertview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSAlertview.h; sourceTree = "<group>"; };
+		51E3DB731BF03E4C00CEE060 /* XSAlertview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSAlertview.m; sourceTree = "<group>"; };
+		51EA047D1BF47F3A003A93F0 /* XSQRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSQRView.h; sourceTree = "<group>"; };
+		51EA047E1BF47F3A003A93F0 /* XSQRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSQRView.m; sourceTree = "<group>"; };
+		51EA047F1BF47F3A003A93F0 /* zbar_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar_line@2x.png"; sourceTree = "<group>"; };
+		51EA04801BF47F3A003A93F0 /* zbar_pick_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar_pick_bg@2x.png"; sourceTree = "<group>"; };
 		51FC2AE61B79E5620051AA1F /* XS_iOS_Utility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XS_iOS_Utility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FC2AEA1B79E5620051AA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51FC2AEB1B79E5620051AA1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -165,6 +175,26 @@
 			name = "时间选择器";
 			sourceTree = "<group>";
 		};
+		51E3DB711BF03E1200CEE060 /* 消息提示 */ = {
+			isa = PBXGroup;
+			children = (
+				51E3DB721BF03E4C00CEE060 /* XSAlertview.h */,
+				51E3DB731BF03E4C00CEE060 /* XSAlertview.m */,
+			);
+			name = "消息提示";
+			sourceTree = "<group>";
+		};
+		51EA047C1BF47F3A003A93F0 /* XSQRView */ = {
+			isa = PBXGroup;
+			children = (
+				51EA047D1BF47F3A003A93F0 /* XSQRView.h */,
+				51EA047E1BF47F3A003A93F0 /* XSQRView.m */,
+				51EA047F1BF47F3A003A93F0 /* zbar_line@2x.png */,
+				51EA04801BF47F3A003A93F0 /* zbar_pick_bg@2x.png */,
+			);
+			path = XSQRView;
+			sourceTree = "<group>";
+		};
 		51FC2ADD1B79E5620051AA1F = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +221,8 @@
 		51FC2AE81B79E5620051AA1F /* XS_iOS_Utility */ = {
 			isa = PBXGroup;
 			children = (
+				51EA047C1BF47F3A003A93F0 /* XSQRView */,
+				51E3DB711BF03E1200CEE060 /* 消息提示 */,
 				519A96071B7F3B6D00F997C5 /* 时间选择器 */,
 				51917CD61B7C31E000A0DBBA /* Utility */,
 				51FC2B0F1B79E5960051AA1F /* 地区选择器 */,
@@ -416,11 +448,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				51D24A961B95EE4E0058EF3E /* 2.png in Resources */,
+				51EA04831BF47F3A003A93F0 /* zbar_pick_bg@2x.png in Resources */,
 				51D24A981B95EE4E0058EF3E /* 1.png in Resources */,
 				51FC2B481B79E5960051AA1F /* 胡巴.jpg in Resources */,
 				51FC2AF51B79E5620051AA1F /* Main.storyboard in Resources */,
 				51FC2B461B79E5960051AA1F /* area.plist in Resources */,
 				51FC2AFA1B79E5620051AA1F /* LaunchScreen.xib in Resources */,
+				51EA04821BF47F3A003A93F0 /* zbar_line@2x.png in Resources */,
 				51D24A971B95EE4E0058EF3E /* 3.png in Resources */,
 				51FC2AF71B79E5620051AA1F /* Images.xcassets in Resources */,
 			);
@@ -440,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E3DB741BF03E4C00CEE060 /* XSAlertview.m in Sources */,
 				51FC2B4F1B79E5960051AA1F /* AFURLConnectionOperation.m in Sources */,
 				51FC2B4A1B79E5960051AA1F /* AFHTTPRequestOperation.m in Sources */,
 				51FC2B5D1B79E5960051AA1F /* ZoomImageView.m in Sources */,
@@ -451,6 +486,7 @@
 				51FC2B501B79E5960051AA1F /* AFURLRequestSerialization.m in Sources */,
 				51FC2AF21B79E5620051AA1F /* ViewController.m in Sources */,
 				51FC2B591B79E5960051AA1F /* UIRefreshControl+AFNetworking.m in Sources */,
+				51EA04811BF47F3A003A93F0 /* XSQRView.m in Sources */,
 				51FC2B511B79E5960051AA1F /* AFURLResponseSerialization.m in Sources */,
 				51FC2AEF1B79E5620051AA1F /* AppDelegate.m in Sources */,
 				51917CD91B7C31E000A0DBBA /* Utility.m in Sources */,

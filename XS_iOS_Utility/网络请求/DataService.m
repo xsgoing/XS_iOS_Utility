@@ -17,6 +17,7 @@
                             completion:(void(^)(id result,NSError *error))block {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    method = [method uppercaseString];
     manager.requestSerializer.timeoutInterval = time;
     if (responseSerializer == nil) {
         
@@ -111,6 +112,7 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer.timeoutInterval = time;
+    method = [method uppercaseString];
     manager.responseSerializer = responseSerializer;
     AFHTTPRequestOperation *operation = [manager POST:urlString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
