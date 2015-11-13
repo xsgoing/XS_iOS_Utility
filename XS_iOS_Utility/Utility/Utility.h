@@ -237,4 +237,24 @@
  *  @return 颜色
  */
 + (UIColor*) getPixelColorAtLocation:(CGPoint)point inImage:(UIImage *)image;
+
+/**
+ *  生成指定内容宽度的二维码
+ *
+ *  @param string 内容
+ *  @param width  宽度
+ *
+ *  @return 二维码图片
+ */
+- (UIImage *)createQRCodeWithString:(NSString *)string Width:(CGFloat)width;
+
+/**
+ *  根据CIImage生成指定大小的UIImage
+ *
+ *  @param image CIImage
+ *  @param size  图片宽度
+ *
+ *  @return UIImage
+ */
+- (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat) size;
 @end
