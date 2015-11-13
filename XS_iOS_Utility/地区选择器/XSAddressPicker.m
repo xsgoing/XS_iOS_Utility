@@ -43,6 +43,7 @@
     UIButton *choose = [UIButton buttonWithType:UIButtonTypeCustom];
     choose.frame = CGRectMake(self.frame.size.width*0.1, 10, self.frame.size.width * 0.8, 30);
     [choose setTitle:@"确定" forState:UIControlStateNormal];
+    choose.layer.cornerRadius = 5;
     choose.backgroundColor = [UIColor colorWithRed:0.302f green:0.678f blue:1.000f alpha:1.00f];
     [choose addTarget:self action:@selector(chooseAddress) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:choose];
