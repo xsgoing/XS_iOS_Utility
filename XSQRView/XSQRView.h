@@ -7,6 +7,6 @@
 //
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-@interface XSQRView : UIView<AVCaptureMetadataOutputObjectsDelegate>
+@interface XSQRView : UIView<AVCaptureMetadataOutputObjectsDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic,copy) void(^block)(NSString *url);
 @end

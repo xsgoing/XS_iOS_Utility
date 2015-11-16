@@ -59,6 +59,7 @@
     city = @"通州";
     area = @"";
 
+
 }
 
 #pragma mark - UIPickerView delegate
