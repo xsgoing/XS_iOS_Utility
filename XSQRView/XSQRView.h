@@ -7,6 +7,7 @@
 //
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 @interface XSQRView : UIView<AVCaptureMetadataOutputObjectsDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic,copy) void(^block)(NSString *url);
 @end

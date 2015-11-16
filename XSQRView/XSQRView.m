@@ -115,6 +115,7 @@ BOOL isUp;
     return self;
 }
 
+// 打开相册
 - (void)choosePhoto {
     
     UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
@@ -127,6 +128,8 @@ BOOL isUp;
     }];
     
 }
+
+// 开关灯
 - (void)turnBtnEvent:(UIButton *)button_
 {
     button_.selected = !button_.selected;
@@ -234,6 +237,13 @@ BOOL isUp;
         
     {
 
+        // 播放声音
+        SystemSoundID soundID;
+        NSString *path = [[NSBundle mainBundle]pathForResource:@"noticeMusic" ofType:@"wav"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL URLWithString:path], &soundID);
+        AudioServicesPlaySystemSound(soundID);
+        
+        
         //停止扫描
         
         [_session stopRunning];
