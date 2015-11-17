@@ -16,6 +16,7 @@ typedef enum : NSUInteger {
 } ImageType;
 
 @interface XSPhotoCarousel : UIView<UIScrollViewDelegate>
+@property (nonatomic,assign)void(^block)(NSInteger index);
 /**
  *  创建轮播图
  *
@@ -23,9 +24,10 @@ typedef enum : NSUInteger {
  *  @param images     图片数组
  *  @param imageType  数组中元素类型
  *  @param autoScroll 是否自动滚动
- *
+ *  @param image      默认图片
  *  @return 轮播图
  */
-- (instancetype)initWithFrame:(CGRect)frame Images:(NSArray *)images ImageType:(ImageType)imageType AutoScroll:(BOOL)autoScroll;
+- (instancetype)initWithFrame:(CGRect)frame Images:(NSArray *)images ImageType:(ImageType)imageType AutoScroll:(BOOL)autoScroll placeImg:(UIImage *)image;
+
 
 @end

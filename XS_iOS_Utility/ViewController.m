@@ -15,6 +15,7 @@
 #import "XSDatePicker.h"
 #import "XSProgress.h"
 #import "XSAlertview.h"
+#import "XSPhotoCarousel.h"
 @interface ViewController ()
 {
     UILabel *address;
@@ -33,10 +34,7 @@
     address.text = @"选择城市";
     [self.view addSubview:address];
     
-    // 网络请求
-//    [DataService requestURL:@"https://github.com" httpMethod:@"POST" timeout:1 params:nil responseSerializer:[AFHTTPResponseSerializer serializer] completion:^(id result, NSError *error) {
-//        NSLog(@"%@%@",result,error);
-//    }];
+   
     
     
     // 点击小图显示大图
@@ -74,6 +72,13 @@
      [XSProgress show];
     
     [self performSelector:@selector(hideit) withObject:nil afterDelay:5];
+    
+     XSPhotoCarousel *xsCarousel = [[XSPhotoCarousel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200) Images:@[@"1",@"2",@"3"] ImageType:ImageTypeLocalPath AutoScroll:NO placeImg:[UIImage imageNamed:@"1"]];
+    [xsCarousel setBlock:^(NSInteger index) {
+        
+    }];
+    [self.view addSubview:xsCarousel];
+    
 }
 
 - (void)hideit {
