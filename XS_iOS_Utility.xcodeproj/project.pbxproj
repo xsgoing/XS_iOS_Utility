@@ -16,6 +16,7 @@
 		515E194D1BF9B0DE00C2DB5F /* noticeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 515E194C1BF9B0DE00C2DB5F /* noticeMusic.wav */; };
 		51917CD91B7C31E000A0DBBA /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 51917CD81B7C31E000A0DBBA /* Utility.m */; };
 		519A960A1B7F3B8800F997C5 /* XSDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 519A96091B7F3B8800F997C5 /* XSDatePicker.m */; };
+		51D075941BFAFC7D00D11E5F /* ChooseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D075931BFAFC7D00D11E5F /* ChooseTableView.m */; };
 		51D24A921B95E8470058EF3E /* XSProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D24A911B95E8470058EF3E /* XSProgress.m */; };
 		51D24A961B95EE4E0058EF3E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D24A931B95EE4E0058EF3E /* 2.png */; };
 		51D24A971B95EE4E0058EF3E /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D24A941B95EE4E0058EF3E /* 3.png */; };
@@ -78,6 +79,8 @@
 		51917CD71B7C31E000A0DBBA /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		51917CD81B7C31E000A0DBBA /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		519A96091B7F3B8800F997C5 /* XSDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDatePicker.m; sourceTree = "<group>"; };
+		51D075921BFAFC7D00D11E5F /* ChooseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseTableView.h; sourceTree = "<group>"; };
+		51D075931BFAFC7D00D11E5F /* ChooseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseTableView.m; sourceTree = "<group>"; };
 		51D24A901B95E8470058EF3E /* XSProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSProgress.h; sourceTree = "<group>"; };
 		51D24A911B95E8470058EF3E /* XSProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSProgress.m; sourceTree = "<group>"; };
 		51D24A931B95EE4E0058EF3E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -205,6 +208,15 @@
 			name = "时间选择器";
 			sourceTree = "<group>";
 		};
+		51D075911BFAFC7D00D11E5F /* 列表选择 */ = {
+			isa = PBXGroup;
+			children = (
+				51D075921BFAFC7D00D11E5F /* ChooseTableView.h */,
+				51D075931BFAFC7D00D11E5F /* ChooseTableView.m */,
+			);
+			path = "列表选择";
+			sourceTree = "<group>";
+		};
 		51E3DB711BF03E1200CEE060 /* 消息提示 */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +270,7 @@
 		51FC2AE81B79E5620051AA1F /* XS_iOS_Utility */ = {
 			isa = PBXGroup;
 			children = (
+				51D075911BFAFC7D00D11E5F /* 列表选择 */,
 				515E193C1BF9A6DB00C2DB5F /* XSQRView */,
 				51EA06D21BF73179003A93F0 /* 轮播图 */,
 				51EA06C71BF6C300003A93F0 /* XSFollowView */,
@@ -519,6 +532,7 @@
 			files = (
 				51E3DB741BF03E4C00CEE060 /* XSAlertview.m in Sources */,
 				51FC2B4F1B79E5960051AA1F /* AFURLConnectionOperation.m in Sources */,
+				51D075941BFAFC7D00D11E5F /* ChooseTableView.m in Sources */,
 				51FC2B4A1B79E5960051AA1F /* AFHTTPRequestOperation.m in Sources */,
 				51EA06CA1BF6C300003A93F0 /* XSFollowView.m in Sources */,
 				51FC2B5D1B79E5960051AA1F /* ZoomImageView.m in Sources */,
